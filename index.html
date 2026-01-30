@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>生日祝福</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #fafafa;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "PingFang SC", "Microsoft YaHei", sans-serif;
+      color: #333;
+    }
+    .page {
+      max-width: 420px;
+      min-height: 100vh;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .card {
+      background: #ffffff;
+      width: 90%;
+      padding: 36px 24px;
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      text-align: center;
+    }
+    .name {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 6px;
+    }
+    .date {
+      font-size: 14px;
+      color: #999;
+      margin-bottom: 26px;
+    }
+    h1 {
+      font-size: 24px;
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin: 6px 0;
+    }
+    .footer {
+      margin-top: 28px;
+      font-size: 14px;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="name" id="name"></div>
+      <div class="date" id="date"></div>
+
+      <h1>生日快乐</h1>
+      <p>又一年了。</p>
+      <p>愿你日子平稳，</p>
+      <p>想做的事都慢慢靠近。</p>
+      <p>照顾好自己，</p>
+      <p>也记得偶尔开心。</p>
+
+      <div class="footer">一位普通朋友</div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const surnames = ["林","周","陈","许","顾","沈","苏","叶","白","程"];
+      const names = ["言","安","宁","舟","然","清","屿","辰","远","初"];
+
+      // const name =
+      //   surnames[Math.floor(Math.random() * surnames.length)] +
+      //   names[Math.floor(Math.random() * names.length)] +
+      //   names[Math.floor(Math.random() * names.length)];
+      const name = '小芒果'
+      const date = '12.24'
+      // const month = Math.floor(Math.random() * 12) + 1;
+      // const day = Math.floor(Math.random() * 28) + 1;
+      // const date = month + " 月 " + day + " 日";
+
+      document.getElementById("name").innerText = name;
+      document.getElementById("date").innerText = date;
+    })();
+  </script>
+</body>
+</html>
